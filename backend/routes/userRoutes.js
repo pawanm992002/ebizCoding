@@ -3,7 +3,7 @@ const router = express.Router();
 const { User } = require("../models/userModel");
 const jwt = require("jsonwebtoken");
 
-const secret_key = "secret_key";
+const secret_key = process.env.REACT_APP_SECRET_KEY;
 
 const authenticateJWT = (req, res, next) => {
   const token = req.header("Authorization");
