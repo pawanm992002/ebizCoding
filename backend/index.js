@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const PORT = process.env.PORT || 8000;
 
-mongoose.connect("mongodb+srv://pawanm992002:tryweddingedit@cluster0.5myq2al.mongodb.net/interview").then(() => {
+mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("database connected");
 }).catch((err) => {
     console.log("database not connected", err);
